@@ -1,0 +1,24 @@
+<?php
+
+namespace DummyNamespace;
+
+use Cndrsdrmn\Repositories\BaseRepository;
+
+class DummyClass extends BaseRepository
+{
+	/**
+	 * Create instace of model
+	 * 
+	 * @var string|\Illuminate\Database\Eloquent\Model
+	 */
+	protected $model = 'DummyModel';
+
+	/**
+     * The array of payload fillable 
+     *
+     * @var array
+     */
+    protected $payloadFillable = [
+    	'DummyPayloads'
+    ];
+}

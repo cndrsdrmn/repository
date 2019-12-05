@@ -1,0 +1,34 @@
+{
+    "name": "cndrsdrmn/repositories",
+    "description": "The package laravel repositories",
+    "minimum-stability": "stable",
+    "keywords": [ "repositories" ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.1.3",
+        "illuminate/contracts": "^5.8",
+        "illuminate/database": "^5.8",
+        "illuminate/http": "^5.8",
+        "illuminate/support": "^5.8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
+    },
+    "authors": [
+        {
+            "name": "Candra Sudirman",
+            "email": "cndrsdrmn@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Cndrsdrmn\\Repositories\\": "src/" }
+    },
+    "extra": {
+        "component": "package",
+        "laravel": {
+            "providers": [
+                "Cndrsdrmn\\Repositories\\RepositoryServiceProvider"
+            ]
+        }
+    }
+}
