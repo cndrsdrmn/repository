@@ -222,6 +222,10 @@ abstract class BaseRepository implements RepositoryInterface
             $query->orWhere($this->model->getSlugKeyName(), $model);
         }
 
+        if ( method_exists($this->model, 'getUuidKeyName') ) {
+            $query->orWhere($this->model->getUuidKeyName(), $model);
+        }
+
         $method = $fail ? 'firstOrFail' : 'first';
 
         return $query->{$method}($columns);
