@@ -195,7 +195,7 @@ abstract class BaseRepository implements RepositoryInterface
         $data = $this->payloads($request);
 
         if ( ! is_null($model) ) {
-            $model = $this->findByIdentifire($model);
+            $model = $model instanceof Model ? $model : $this->findByIdentifire($model);
             $model->update($data);
         } else {
             $model = $this->model->create($data);
